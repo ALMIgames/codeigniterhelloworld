@@ -23,7 +23,7 @@ class Welcome extends CI_Controller {
 	}
 
 	public function grettings($name = null){
-		$data= array();
+		$data = array();
 		$data['parametre1'] = $name;
 		$this->load->view('grettings',$data);
 	}

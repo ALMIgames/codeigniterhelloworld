@@ -67,7 +67,7 @@
 <body>
 
 <div id="container">
-	<div id="container">Hola <?php echo $parametre1;?>!</h1>
+	<div id="container">Hola <?php echo $parametre1;?>! Benvingut al curs <?php echo $parametre2;?>! </h1>
 </div>
 
 </body>
