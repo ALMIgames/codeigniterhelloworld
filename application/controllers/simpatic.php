@@ -20,6 +20,13 @@ class Simpatic extends CI_Controller {
 		
 		$this->load->view('grettings',$data);
 	}
+
+	public function grettings2(){
+
+		$data=array();
+		$nom=$this->input->get_post('nom');
+		print_r('Hola '.$nom);
+	}
 }
 
 /* End of simpatic.php */
