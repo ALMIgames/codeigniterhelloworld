@@ -1,0 +1,20 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class simpatic extends CI_Controller {
+
+	public function index()
+	{
+		$this->load->view('welcome_message');
+	}
+
+	public function grettings($name = null){
+		$data= array();
+		$data['parametre1'] = $name;
+		$data['parametre2'] = $name;
+		$data['parametre3'] = $name;
+		$this->load->view('grettings',$data);
+	}
+}
+
+/* End of fiñe simpatic.php */
+/* Location: ./application/controllers/simpatic.php */
