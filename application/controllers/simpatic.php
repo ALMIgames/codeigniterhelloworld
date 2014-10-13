@@ -8,14 +8,18 @@ class Simpatic extends CI_Controller {
 		$this->load->helper('url');
 	}
 
-	public function index()
-	{
+	public function index(){
 		$this->grettings('mon');
 	}
 
 	public function form_example(){
-		$data=array();
-		$this->load->view('form_example',$data);
+		$data= array();
+		if ( isset ($_POST)){
+			$data['firstname'] = $this->input->get_post("firstname");
+			$data['lastname'] = $this->input->get_post("lastname");
+		}
+			
+			$this->load->view('form_example',$data);
 	}
  
 	public function grettings($name = null){
