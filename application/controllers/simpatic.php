@@ -5,6 +5,7 @@ class Simpatic extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 		$this->config->load('codeigniterhelloworld');
+		$this->load->helper('url');
 	}
 
 	public function index()
@@ -12,6 +13,11 @@ class Simpatic extends CI_Controller {
 		$this->grettings('mon');
 	}
 
+	public function form_example(){
+		$data=array();
+		$this->load->view('form_example',$data);
+	}
+ 
 	public function grettings($name = null){
 		$data= array();
 
@@ -27,6 +33,7 @@ class Simpatic extends CI_Controller {
 		$nom=$this->input->get_post('nom');
 		print_r('Hola '.$nom);
 	}
+
 }
 
 /* End of simpatic.php */
